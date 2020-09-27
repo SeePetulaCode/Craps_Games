@@ -1,0 +1,44 @@
+let d1 = Int.random(in: 1...6)
+let d2 = Int.random(in: 1...6)
+var sumDie = d1 + d2
+
+
+if sumDie == 7 || sumDie == 11
+{
+    
+    print("Total:\(sumDie). You WIN in the first throw")
+    
+}
+
+else if sumDie == 12 || sumDie == 7 || sumDie == 11
+
+{
+    
+    print("Total:\(sumDie). You LOST in the first throw")
+    
+}  else
+
+{
+    
+    let point = sumDie
+    repeat
+    
+    {
+        
+        let d1 = Int32.random(in: 1...6)
+        let d2 = Int32.random(in: 1...6)
+        sumDie = Int(d1 + d2)
+        
+    } while (sumDie != 7 && sumDie != point)
+        if (sumDie == 7)
+        {
+            print("You LOST with \(point) ")
+        
+        } else{
+            
+            print("You WIN with \(point). ")
+            
+        }
+}
+    
+   
